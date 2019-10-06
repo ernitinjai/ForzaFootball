@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="team"
+            type="com.forza.api.model.Team" />
+
+        <variable
+            name="itemClickListener"
+            type="com.forza.team.ui.team.TeamsAdapter.OnItemClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> itemClickListener.onItemClicked(team.id)}"
+        android:padding="@dimen/standard_margin">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_half_margin"
+            android:maxLines="1"
+            android:text="@{team.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/thumbIcon"
+            app:layout_constraintTop_toTopOf="@+id/thumbIcon" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_half_margin"
+            android:maxLines="1"
+            android:text="@{team.gender}"
+            app:layout_constraintBottom_toBottomOf="@+id/thumbIcon"
+            app:layout_constraintEnd_toEndOf="@+id/title"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbIcon"
+            android:layout_width="@dimen/badge_icon_size"
+            android:layout_height="@dimen/badge_icon_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/black"
+            app:teamBadgeIcon="@{team.id}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

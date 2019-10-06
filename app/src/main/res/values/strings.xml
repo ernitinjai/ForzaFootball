@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FootballTeam</string>
+    <string name="network_error">Could not load the teams.\nSwipe down to retry.</string>
+    <string name="badge_url">https://android-exam.s3-eu-west-1.amazonaws.com/teams/%1$d/badge.png</string>
+    <string name="teams">Teams</string>
+    <string name="detail">Detail</string>
+</resources>
