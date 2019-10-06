@@ -6,7 +6,7 @@ This application loads the football teams and details hosting service.Each team 
   - Gender of the team
   - Badge icon of the team
   
- ![Alt text](/screenshots/team-list.jpg?raw=true "Teams") ![Alt text](/screenshots/team-detail.jpg?raw=true "Team Detail")
+ ![Alt text](/screenshots/team-list.png?raw=true "Teams") ![Alt text](/screenshots/team-detail.png?raw=true "Team Detail")
  
  
 # Tech Stack
